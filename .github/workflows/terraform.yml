@@ -25,4 +25,4 @@ jobs:
            run: |
                 terraform init -backend-config="access_key=AKIASMOGYMFMCQPGRLWF" -backend-config="secret_key=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" -backend-config="region=us-east-1" 
                 terraform validate
-                terraform apply --auto-approve -lock=false
+                terraform destroy --auto-approve -lock=false
