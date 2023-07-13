@@ -26,7 +26,8 @@ jobs:
               aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           - name: Initialize Terraform
             run: |
-              terraform init -input=false  -lock=false        
+              terraform init -input=false  
+              terraform init -upgrade
           - name: Plan Terraform
             id: plan
             run: |
