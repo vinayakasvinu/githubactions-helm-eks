@@ -30,4 +30,4 @@ jobs:
           - name: Plan Terraform
             id: plan
             run: |
-              terraform plan -input=false -no-color  
+              terraform plan -input=false -no-color -lock=false
