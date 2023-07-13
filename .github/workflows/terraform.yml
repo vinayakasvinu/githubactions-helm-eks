@@ -24,7 +24,4 @@ jobs:
              AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
          - name: Echo an expression
            run: echo "The current date is ${{ secrets.AWS_SECRET_ACCESS_KEY }}"
-         - name: Terraform
-           run: |
-                terraform init 
-                terraform apply --auto-approve 
+
