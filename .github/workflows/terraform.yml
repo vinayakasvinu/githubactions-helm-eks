@@ -23,6 +23,6 @@ jobs:
              AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
              AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
            run: |
-                echo "The current date is ${{ secrets.AWS_ACCESS_KEY_ID }}"
+                echo "The current date is ${{ steps.step_name.outputs.date }}"
                 terraform init 
                 terraform apply --auto-approve -lock=false
