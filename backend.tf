@@ -5,11 +5,11 @@ terraform {
     key            = "terraform-eks-asset.tfstate"
     region         = "us-east-1"
     encrypt        = true
-    hash_key     = "Lock_Id"
+    hash_key     = "LockId"
   
 
   attribute {
-    name = "Lock_Id"
+    name = "LockId"
     type = "S"
   }
 }
