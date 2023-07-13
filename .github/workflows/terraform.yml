@@ -23,6 +23,6 @@ jobs:
              AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
              AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
            run: |
-                terraform init -backend-config="access_key=AKIASMOGYMFMCQPGRLWF" -backend-config="secret_key=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" -backend-config="region=us-east-1" 
+                terraform init 
                 terraform validate
                 terraform destroy --auto-approve -lock=false
