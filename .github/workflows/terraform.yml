@@ -24,6 +24,5 @@ jobs:
              AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
            run: |
                 echo "$AWS_ACCESS_KEY_ID"
-                terraform init
-                terraform apply -var "acess_key=AWS_ACCESS_KEY_ID" secret_key=AWS_SECRET_ACCESS_KEY
+                terraform init -backend-config="access_key=AWS_ACCESS_KEY_ID" -backend-config="secret_key=AWS_SECRET_ACCESS_KEY"
       
