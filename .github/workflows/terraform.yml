@@ -24,4 +24,4 @@ jobs:
              AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
            run: |
                 terraform init 
-                terraform apply -backend-config="access_key=${{ secrets.AWS_ACCESS_KEY_ID }} " -backend-config="secret_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" -backend-config="region=us-east-1" 
+                terraform apply --auto-approve -backend-config="access_key=${{ secrets.AWS_ACCESS_KEY_ID }} " -backend-config="secret_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" -backend-config="region=us-east-1" 
