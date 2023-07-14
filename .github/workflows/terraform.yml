@@ -1,9 +1,7 @@
-name: "Terraform-Plan"
-  on:
-    push:
-        branches:
-            - main
-  jobs:
+name: First Workflow
+on: workflow_dispatch
+
+jobs:
     terraform:
         name: "Terraform"
         runs-on: ubuntu-latest
@@ -21,3 +19,5 @@ name: "Terraform-Plan"
               run: terraform init
             - name: Terraform Plan
               run: terraform plan -no-color
+            - name: Terraform Apply
+              run: terraform apply --auto-approve -no-color
