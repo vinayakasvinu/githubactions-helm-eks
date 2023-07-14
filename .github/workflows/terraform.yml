@@ -20,4 +20,4 @@ jobs:
             - name: Terraform Plan
               run: terraform plan -no-color -lock=false
             - name: Terraform Apply
-              run: terraform apply --auto-approve -lock=false
+              run: terraform apply --auto-approve 
