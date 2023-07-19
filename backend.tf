@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket         = "myterraformbucket-asset"
+    bucket         = "s3-manoj"
     dynamodb_table = "terraform-db-table"
     key            = "terraform-eks-asset.tfstate"
     region         = "us-east-1"
