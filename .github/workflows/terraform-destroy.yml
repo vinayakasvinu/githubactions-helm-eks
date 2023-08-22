@@ -17,6 +17,9 @@ jobs:
             - name: Terraform Init
               id: init
               run: terraform init
+            - name: Terraform apply
+              id: apply
+              run: terraform apply --auto-approve -lock=false              
             - name: Terraform Plan
               run: terraform plan -no-color -lock=false
             - name: Terraform destroy
